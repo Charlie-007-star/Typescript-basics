@@ -1,18 +1,30 @@
-function add(a: number,b: number,printResult: boolean,phrase: string){
+/* ------------------------------- Union Types ------------------------------ */
+function combine(input1: number | string,input2: number | string,resultType: string) {
 
-    let result:number = a + b;
-    if(printResult){
-        console.log(phrase+result);
+    let result: number | string;
+
+    if(typeof input1 === 'number' && typeof input2 === 'number') {
+
+         result = input1 + input2;
     }else{
-        return a+b;
+        result = input1.toString() + input2.toString();
     }
+
+    if(resultType === 'as-number') {
+        console.log("as-number: ");
+        return +result;
+    }else{
+        return result.toString();
+    }
+    
 }
 
-const a = 5;
-const b = 5.5;
-const printResult = true
-const phrase = "Result is: "
- 
-add(a,b,printResult,phrase);
+const combinedAges = combine(30,20,'as-string');
+console.log(combinedAges);  
+
+const numberConvert = combine('30','20','as-number');
+console.log(numberConvert);
 
 
+const combineNames = combine('Max', 'Anna','second');
+console.log(combineNames);
