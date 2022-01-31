@@ -1,7 +1,6 @@
 "use strict";
-/* ------------------------------ Unknown type & Never type ------------------------------ */
-let user;
-let username;
+var user;
+var username;
 user = 'Max';
 if (typeof user === 'string') {
     username = user;

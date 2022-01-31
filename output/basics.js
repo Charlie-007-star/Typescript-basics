@@ -1,5 +1,4 @@
 "use strict";
-/* ----------------------------------Object & Array & Tuple & Enum & Any--------------------------------- */
 var Role;
 (function (Role) {
     Role["ADMIN"] = "ADMIN";
@@ -13,9 +12,10 @@ var person = {
     hobbies: ['Sports', 'Cooking'],
     role: Role.ADMIN
 };
-let favourite;
+var favourite;
 favourite = ['music', "videos"];
-for (const hobby of person.hobbies) {
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
     console.log(hobby);
 }
 if (person.role === Role.ADMIN) {

@@ -7,7 +7,7 @@ function combine(
     input2: combinable,
     resultType: twist
     ) {
-
+        
     let result: combinable;
 
     if(typeof input1 === 'number' && typeof input2 === 'number' || resultType === 'as-number') {
@@ -26,6 +26,7 @@ console.log(combinedAges);
 
 const numberConvert = combine('30','20','as-number');
 console.log(numberConvert);
+
 
 
 const combineNames = combine('Max', 'Anna','as-string');
